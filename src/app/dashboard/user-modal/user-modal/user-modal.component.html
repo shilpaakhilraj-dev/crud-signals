@@ -1,0 +1,103 @@
+@if (isOpen()) {
+<div class="modal-backdrop fade show"></div>
+
+<div class="modal d-block" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">{{ config.title }}</h5>
+        <button type="button" class="btn-close" (click)="hide()"></button>
+      </div>
+
+      <div class="modal-body">
+        <form [formGroup]="form">
+   
+            <h6 class="text-primary mb-3">Basic Information</h6>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <input class="form-control" formControlName="name">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Username</label>
+                <input class="form-control" formControlName="username">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input class="form-control" formControlName="email">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input class="form-control" formControlName="phone">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Website</label>
+                <input class="form-control" formControlName="website">
+              </div>
+            </div>
+
+            <div class="my-4"></div>
+
+            <h6 class="text-primary mb-3">Address</h6>
+            <div formGroupName="address" class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Street</label>
+                <input class="form-control" formControlName="street">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Suite</label>
+                <input class="form-control" formControlName="suite">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">City</label>
+                <input class="form-control" formControlName="city">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Zipcode</label>
+                <input class="form-control" formControlName="zipcode">
+              </div>
+            </div>
+
+            <div class="my-4"></div>
+
+            <h6 class="text-primary mb-3">Company</h6>
+            <div formGroupName="company" class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Company Name</label>
+                <input class="form-control" formControlName="name">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Catch Phrase</label>
+                <input class="form-control" formControlName="catchPhrase">
+              </div>
+
+              <div class="col-md-12">
+                <label class="form-label">Business</label>
+                <input class="form-control" formControlName="bs">
+              </div>
+            </div>
+
+        </form>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="hide()">Cancel</button>
+        <button class="btn btn-primary" (click)="onSubmit()">
+          {{ config.mode === 'create' ? 'Create' : 'Update' }}
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+}

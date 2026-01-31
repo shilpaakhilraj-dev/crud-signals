@@ -1,0 +1,54 @@
+<div class="page">
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mt-3 mb-3">
+      <h5 class="mb-0">Users</h5>
+      <button class="btn btn-primary" (click)="addUser()">Add User</button>
+    </div>
+    <div class="card shadow-sm">
+      <div class="card-body p-0">
+        <table class="table table-hover mb-0 align-middle">
+          <thead class="table-light">
+            <tr>
+              <th class="text-center">User ID</th>
+              <th class="text-center">Name</th>
+              <th class="text-center">Contact</th>
+              <th class="text-center">Email</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            @for (user of users(); track user.id) {
+              <tr>
+                <td>{{ user.id }}</td>
+                <td class="fw-semibold text-center">{{ user.name }}</td>
+                <td class="text-center">{{ user.phone }}</td>
+                <td class="text-center">{{ user.email }}</td>
+                <td class="text-center">
+                  <i
+                    class="bi bi-pencil-square text-primary action-icon me-3"
+                    role="button"
+                    title="Edit"
+                    (click)="editUser(user)"
+                  ></i>
+                  <i
+                    class="bi bi-trash text-danger action-icon"
+                    role="button"
+                    title="Delete"
+                    (click)="onClickDelete(user)"
+                  ></i>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-user-modal #userModal></app-user-modal>
+
+<app-modal #deleteConfirmationModal>
+  <app-user-delete-confirmation></app-user-delete-confirmation>
+</app-modal>

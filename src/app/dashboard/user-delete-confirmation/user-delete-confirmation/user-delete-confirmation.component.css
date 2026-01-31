@@ -1,0 +1,20 @@
+.modal-header,
+.modal-footer {
+  border-bottom: none;
+  border-top: none;
+}
+
+.delete-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(220, 53, 69, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-icon {
+  font-size: 28px;
+  color: #dc3545;
+}

@@ -1,0 +1,24 @@
+@if (isOpen()) {
+  <div class="modal-backdrop fade show"></div>
+
+  <div class="modal d-block">
+    <div 
+        class="modal-dialog modal-dialog-scrollable"
+        [ngClass]="{
+           'modal-sm': config().size === 'sm',
+           'modal-lg': config().size === 'lg',
+           'modal-xl': config().size === 'xl',
+           'modal-fullscreen': config().size === 'fullscreen',
+           'modal-dialog-centered': config().position === 'center'
+        }"
+        [style.maxWidth]="config().width ?? 'auto'"
+    >
+
+      <div class="modal-content">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3"  (click)="close()" aria-label="Close"></button>
+        <ng-content></ng-content>
+      </div>
+
+    </div>
+  </div>
+}
