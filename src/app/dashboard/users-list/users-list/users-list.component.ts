@@ -7,6 +7,7 @@ import { ModalComponent } from '../../../core/shared/modal/modal/modal.component
 import { UserDeleteConfirmationComponent } from '../../user-delete-confirmation/user-delete-confirmation/user-delete-confirmation.component';
 import { LoaderService } from '../../../core/services/loader/loader.service';
 import { UserService } from '../../../core/services/user/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users-list',
@@ -32,8 +33,19 @@ export class UsersListComponent implements OnInit {
 
   userService = inject(UserService);
   
+  // ngOnInit(): void {
+  //   this.loadUsers();
+  // }
+
+  router = inject(Router);
+
   ngOnInit(): void {
-    this.loadUsers();
+    this.router.navigate(['/details'], {
+      state: { userId: 10 }
+    });
+
+    const data = this.router.getCurrentNavigation()?.extras.state;
+    
   }
 
   async loadUsers(): Promise<void> {

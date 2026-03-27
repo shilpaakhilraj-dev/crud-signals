@@ -4,6 +4,7 @@ import { firstValueFrom, timer } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class LoaderService {
 
   private readonly MIN_TIME = 1500;
