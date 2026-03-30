@@ -9,5 +9,5 @@ import { LoaderComponent } from './core/shared/loader/loader/loader.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'todo-signals';
+  title = 'crud-with-signals';
 }
