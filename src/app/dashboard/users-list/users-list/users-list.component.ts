@@ -40,12 +40,7 @@ export class UsersListComponent implements OnInit {
   router = inject(Router);
 
   ngOnInit(): void {
-    this.router.navigate(['/details'], {
-      state: { userId: 10 }
-    });
-
-    const data = this.router.getCurrentNavigation()?.extras.state;
-    
+    this.loadUsers();
   }
 
   async loadUsers(): Promise<void> {
