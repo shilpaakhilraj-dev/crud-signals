@@ -1,59 +1,160 @@
-# CrudSignals
+# 🚀 CRUD Signals App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
+A modern, scalable **Angular 19** application built using **Signals** and deployed on **Vercel**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🌐 Live Demo
+
+👉 https://crud-signals.vercel.app
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge\&logo=vercel)](https://crud-signals.vercel.app)
+
+---
+
+## 📌 Overview
+
+This project demonstrates how to build a **high-performance, CRUD Angular application** using:
+
+* ⚡ Angular Signals for reactive state management
+* 🔄 CRUD operations with clean state handling
+* 🌍 Deployment using Vercel
+
+---
+
+## ✨ Features
+
+* ✅ Create, Read, Update, Delete (CRUD)
+* ⚡ Signal-based state management (no RxJS overload)
+* 🔁 Reactive forms & dynamic components
+* 📦 Optimized production build
+* 🌐 Deployed with CI/CD via Vercel
+* 📱 Responsive UI
+
+---
+
+## 🛠 Tech Stack
+
+| Technology      | Description                     |
+| --------------- | ------------------------------- |
+| Angular 19      | Frontend framework              |
+| Signals         | Reactive state management       |
+| TypeScript      | Strong typing                   |
+| Vercel          | Deployment platform             |
+| Bootstrap / CSS | UI styling                      |
+
+---
+
+## 📂 Project Structure
+
+```bash
+apps/
+  └── crud-signals/
+  └── core/
+       └── constants/
+       └── models/
+       └── services/
+       └── shared/
+```
+
+* **apps/** → Main application
+* **apps/core/** → Shared modules, UI components, utilities
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/shilpaakhilraj-dev/crud-signals.git
+cd crud-signals
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## ▶️ Run Locally
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+App will run at:
+👉 http://localhost:4200
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🏗 Build for Production
 
 ```bash
-ng generate --help
+ng build --configuration production
 ```
 
-## Building
-
-To build the project run:
+Output will be generated in:
 
 ```bash
-ng build
+dist/crud-signals
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🚀 Deployment (Vercel)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+This project is deployed using **Vercel**.
 
-```bash
-ng test
+### Steps:
+
+1. Connect GitHub repo to Vercel
+2. Configure:
+
+   * Build Command: `ng build`
+   * Output Directory: `dist/crud-signals`
+3. Add `vercel.json`:
+
+```json
+{
+  "routes": [
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🔄 CI/CD
 
-```bash
-ng e2e
-```
+* ✅ Automatic deployment on every Git push
+* 🌿 Preview deployments for branches
+* 🚀 Production deployment from `main` branch
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 📸 Screenshots
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+LISTING
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ecbe193a-2619-4c71-8925-eb98c8e0bcf5" />
+
+ADD / EDIT
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69fa24ae-850c-44e0-8cf4-42dc06105672" />
+
+DELETE
+<img width="1458" height="42" alt="image" src="https://github.com/user-attachments/assets/e7392839-4a24-4392-84d9-4cd4de699873" />
+
+
+---
+
+## 🧠 Key Learnings
+
+* Implementing **Signals vs RxJS**
+* Managing state in **large-scale Angular apps**
+* Handling deployment issues in **Vercel**
+* Optimizing performance & bundle size
+
+---
+
